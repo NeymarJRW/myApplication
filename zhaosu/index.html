@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>传奇</title>
+</head>
+<style>
+  * {
+    margin: 0;
+    padding: 0;
+  }
+
+  html,
+  body {
+    width: 100%;
+    height: 100%;
+    background: #3C3C3C;
+    color: aliceblue;
+
+  }
+
+  h1 {
+    text-align: center;
+    font-size: 45px;
+    padding: 20px 0;
+    font-weight: bold;
+  }
+
+  p {
+    width: 70%;
+    margin: 0 auto;
+    padding: 20px 30px;
+    text-indent: 2em;
+    margin-bottom: 20px;
+  }
+
+  .main {
+    width: 50%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+  }
+
+  .main img {
+    width: 80%;
+    transition: all .3s;
+    cursor: pointer;
+    margin-bottom: 5%;
+  }
+
+  .main img:hover {
+    transform: scale(1.1, 1.1);
+  }
+</style>
+
+<body>
+  <h1>传奇游戏</h1>
+  <p>
+    这是一款单机传奇塔防类游戏，在这款游戏中，英雄们的家园正遭受着怪物军队进攻，大敌当前，玩家将扮演一名战斗指挥官，通过放置英雄来抵御汹涌来袭的怪物们。<br>
+    玩家有多种提升战斗力的方式，可以通过升级英雄来提升他们的属性，也可以通过闯关来解锁新英雄成为玩家的新战力，每一名英雄都有着强大的潜力等待玩家的开发。<br>
+    快来和英雄们一起，抵御怪物，守卫我们的家园吧！
+  </p>
+  <div class="main">
+    <img src="./img/1.png" alt="">
+    <img src="./img/2.png" alt="">
+    <img src="./img/3.png" alt="">
+    <img src="./img/4.png" alt="">
+    <img src="./img/5.png" alt="">
+  </div>
+
+</body>
+<script>
+  function sizeChange() {
+    if (document.documentElement.clientWidth > 1200) {
+      [...document.querySelectorAll(".main img")].map(i => i.style.width = "18%");
+      document.querySelector(".main").style.width = "90%";
+    }
+    else {
+      document.querySelector(".main").style.width = "50%";
+      [...document.querySelectorAll(".main img")].map(i => i.style.width = "80%");
+    }
+
+  }
+  sizeChange();
+  window.addEventListener("resize", () => {
+    sizeChange();
+  })
+
+</script>
+
+</html>
